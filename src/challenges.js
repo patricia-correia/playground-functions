@@ -1,10 +1,10 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if (value1 && value2 === true){
+  if (value1 && value2 === true) {
      return true;
-  }else{
+  } else {
      return false;
- }
+  }
 }
 
 // Desafio 2
@@ -14,15 +14,15 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  let array = string.split(" ");
-  return array;
+  string = string.split(' ');
+  return string;
 }
 
 // Desafio 4
-function concatName(array) {
-  let ultimo = array[array.length - 1];
-  let primeiro = array[0];
-  return (ultimo + ", " + primeiro);
+function concatName(string) {
+  let ultimo = string[string.length -1];
+  let primeiro = string[0];
+  return (ultimo + ", "  + primeiro);
 }
 
 // Desafio 5
@@ -34,39 +34,51 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount(array) {
+  let repeticao = [];
+  let repetido = 0;
+
+  for(let index = 0; index < array.length; index +=1){
+    repeticao.push (array[index]); 
+  }
+  for(let index2 = 0;index2 < repeticao.length; index2 +=1){
+    if(repeticao === array.index){
+      repetido += 1;
+    }
+  } 
+  return repetido;
+  }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2){
-  let distance1 = mouse - cat1;
-  let distance2 = mouse - cat2;
-  if( cat1 > cat2) {
-    return "cat1";
-  } else if (cat2 > cat1) {
-    return "cat2";
-  } else {
-    return "os gatos trombaram e o rato foge";
-  }
+function catAndMouse(mouse, cat1, cat2) {
+  let distancia =  (cat1 + cat2);
+  if(distancia / 2 === mouse  ){
+    return 'os gatos trombam e o rato foge';
+  }else if (cat1 - mouse < cat2 - mouse){
+    return 'cat1';
+  }else(cat1 - mouse > cat2 - mouse);{
+    return 'cat2';
+  } 
 }
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+
 }
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+
 }
+
 function decode() {
   // seu código aqui
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arraylst, name) {
+ let list = {};
+  
 }
 
 module.exports = {
