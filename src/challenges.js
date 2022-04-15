@@ -35,20 +35,23 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let repeticao = [];
+  let maior = array[0];
   let repetido = 0;
-
-  for(let index = 0; index < array.length; index +=1){
-    repeticao.push (array[index]); 
-  }
-  for(let index2 = 0;index2 < repeticao.length; index2 +=1){
-    if(repeticao === array.index){
+   
+  for(let index = 0; index <= array.length; index +=1){
+    if(maior < array[index]){
+      maior = array[index]
+    }
+  }  
+  
+  for(let i = 0; i <= array.length; i += 1){
+    if(maior == array[i]){
       repetido += 1;
     }
-  } 
-  return repetido;
   }
-
+  return repetido;
+}
+console.log(highestCount([9, 2, 3, 9]));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distancia =  (cat1 + cat2);
