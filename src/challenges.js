@@ -51,7 +51,7 @@ function highestCount(array) {
   }
   return repetido;
 }
-console.log(highestCount([9, 2, 3, 9]));
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distancia =  (cat1 + cat2);
@@ -65,24 +65,90 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-
+function fizzBuzz(numeroDivisivel){
+  let divisao = [];
+  
+  for(index1 = 0; index1 < numeroDivisivel.length; index1 += 1){ 
+   
+    if(numeroDivisivel[index1] % 15 === 0 ){
+      divisao.push('fizzBuzz');
+      
+    }else if(numeroDivisivel[index1] % 3 === 0){
+      divisao.push('fizz');
+          
+    }else if(numeroDivisivel[index1] % 5 === 0){
+      divisao.push('buzz');
+    
+    }else {
+      divisao.push('bug!');
+      
+    } 
+  }
+  
+  return divisao;
 }
+
+
 
 // Desafio 9
-function encode() {
+function encode(codificador) {
+  let palavra = codificador.split('');
 
+  for (let index2 = 0; index2 < palavra.length; index2 +=1){
+    
+    if(palavra == "a"){
+      palavra[index2] = "1";
+
+    }else if (palavra[index2] ==  "e"){
+     palavra[index2] = "2";
+
+    }else if (palavra == "i"){
+      palavra[index2] = "3";
+
+    }else if (palavra == "o"){
+      palavra[index2] = "4";
+
+    }else if (palavra == "u"){
+      palavra[index2] = "5";
+    }
+  } 
+  return palavra; 
 }
 
-function decode() {
-  // seu código aqui
+function decode(decodificador) {
+  let palavra = decodificador;
+  
+  for (let index3 = 0; index3 < palavra.length; index3 +=1){
+    
+    if(palavra == "1"){
+      palavra[index3] = "a";
+
+    }else if (palavra[index2] ==  "2"){
+     palavra[index3] = "e";
+
+    }else if (palavra == "3"){
+      palavra[index3] = "i";
+
+    }else if (palavra == "4"){
+      palavra[index3] = "o";
+
+    }else if (palavra == "5"){
+      palavra[index3] = "u";
+    }
+  } 
+  return palavra.join(',');
 }
 
 // Desafio 10
-function techList(arraylst, name) {
- let list = {};
+function techList( name) {
+ 
+      
   
-}
+ }
+
+  
+
+
 
 module.exports = {
   calcArea,
